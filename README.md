@@ -41,3 +41,7 @@ cp out_contig.fa hse21_hw1/data/contigs.fasta
 ### [Подрезанные чтения](multiqc/multiqc_trimmed.html)
 ![](img/general_statistics_trimmed.png)
 ![](img/fastqc_adapter_content_plot_trimmed.png)
+
+## Код
+### [Ссылка на Jupyter Notebook](src/hw1.ipynb)
+![](img/python.png)
