@@ -1,5 +1,5 @@
 # Задание 1
-Список всех команд, которые были выполнены на сервере
+## Список всех команд, которые были выполнены на сервере
 ```
 ln -s /usr/share/data-minor-bioinf/assembly/oil_R1.fastq
 ln -s /usr/share/data-minor-bioinf/assembly/oil_R2.fastq
@@ -27,4 +27,17 @@ cp multiqc/multiqc_report.html multiqc_trimmed.html
 platanus assemble -f *.trimmed
 platanus scaffold -c out_contig.fa -IP1 *.trimmed -OP2 *.int_trimmed
 platanus gap_close -c out_scaffold.fa -IP1 *.trimmed -OP2 *.int_trimmed
+
+mkdir hse21_hw1/multiqc && cp multiqc*.html hse21_hw1/multiqc
+mkdir hse21_hw1/data
+cp out_gapClosed.fa hse21_hw1/data/scaffolds.fasta
+cp out_contig.fa hse21_hw1/data/contigs.fasta
 ```
+
+## Скриншоты и статистика из файлов multiQC
+### [Исходные чтения](multiqc/multiqc_full.html)
+![](img/general_statistics_full.png)
+![](img/fastqc_adapter_content_plot_full.png)
+### [Подрезанные чтения](multiqc/multiqc_trimmed.html)
+![](img/general_statistics_trimmed.png)
+![](img/fastqc_adapter_content_plot_trimmed.png)
